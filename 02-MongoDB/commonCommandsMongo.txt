@@ -1,0 +1,25 @@
+COMMAND			   -> DESCRIPTION
+-----------------------------------------------------------------------------------------------------------------------------------------
+use <mydb> 			   -> create a database with name <mydb> o swicth to <mydb> database if already exists
+db 				   -> to check your currently selected database
+show dbs			   -> to check your db lists. If a db is empty, this command will not show it
+db.movie.insert()		   -> insert a document(JSON) into a collection movie of the db selected
+db.dropDatabase()		   -> drop the selected db. If you have not selected any db then it will delete default 'test' db
+db.createCollection(name,options) -> creates a collection. 
+	 	    		      name: name of the collection
+	 	    		      options: is a document(JSON) Used to specify the configuration of a collection. It's an optional
+	 	    		      parameter. Next, is the list of options you can use:
+	 	    		      	- autoIndexId: (Boolean) if true, automatically create index on _id field. Default value is False.
+	 	    		      	- Capped: (Boolean) if true, enables a capped collection.
+	 	    		      	- Size: (Number) Specifies a maximun size in byte for a capped collection.
+	 	    		      	- Max: (Number) Specifies the maximun numbers of documents allowed in the capped collection.
+show collections		   -> Show the list of collections of the current db.
+db.COLLECTION_NAME.drop()	   -> drop the COLLECTION_NAME from the current db. Drop method will return TRUE if the collection was
+				      deleted successfully, otherwise will return FALSE.
+db.COLLECTION_NAME.insert(doc)    -> To insert data into MondoDB collection, you can user insert() or save() method.
+db.COLLECTION_NAME.find()         -> To query data. find() method will display all the data in a non-structured way.
+db.COLLECTION_NAME.find().pretty()-> To query data in a formatted way.
+db.COLLECTION_NAME.findOne()      -> To query data and obtain only one documents
+db.COLLECTION_NAME.update(SELECTION_CRITERIA, UPDATED_DATA) -> Upadates the values in the existing method. There's also the save() method
+								 that replaces the existing document passed in the save() method.
+								 

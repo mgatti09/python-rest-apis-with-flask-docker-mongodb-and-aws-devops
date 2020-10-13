@@ -1,0 +1,2 @@
+Schema: 
+Collection: stores a bunch of documents together.

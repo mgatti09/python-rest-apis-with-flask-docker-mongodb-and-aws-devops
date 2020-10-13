@@ -1,0 +1,5 @@
+spacy
+Flask
+flask_restful
+pymongo
+bcrypt
